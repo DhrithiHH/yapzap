@@ -19,6 +19,38 @@ WebBrowser.maybeCompleteAuthSession();
 // Utility function to check if input is an email
 const isEmail = (identifier) => /\S+@\S+\.\S+/.test(identifier);
 
+// Function to log in with email or custom userId
+export const loginWithEmailOrUserId = async (identifier, password) => {
+  try {
+    let email = identifier;
+
+    // Check if the identifier is not an email
+    if (!isEmail(identifier)) {
+      // Look up the email using the userId
+      const userRef = collection(db, "users");
+      const userQuery = query(userRef, where("userId", "==", identifier));
+      const querySnapshot = await getDocs(userQuery);
+
+      if (!querySnapshot.empty) {
+        // Extract the email from the document
+        const userDoc = querySnapshot.docs[0];
+        email = userDoc.data().email;
+      } else {
+        throw new Error("User ID not found.");
+      }
+    }
+
+    // Sign in with email and password
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    console.log("User logged in:", user);
+    return user;
+  } catch (error) {
+    console.error("Error logging in:", error);
+    throw error;
+  }
+};
+
 // Function to check if userId exists in Firestore
 export const checkIfUserIdExists = async (userId) => {
   try {

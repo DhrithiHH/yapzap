@@ -119,7 +119,7 @@ const RegisterScreen = () => {
     if (username && email && password && userId) {
       try {
         await registerWithCustomUserId(userId, email, password, username);
-        Alert.alert('Welcome!', `Hello ${username}, your account is registered.`);
+        // Alert.alert('Welcome!', `Hello ${username}, your account is registered.`);
         navigation.navigate('Home');
       } catch (error) {
         Alert.alert('Registration Error', error.message);
