@@ -31,7 +31,7 @@ export default function ForgotPassword({ navigation }) {
 
       {/* Sassy Emoji Animation */}
       <LottieView
-        source={require("./assets/emoji.json")}
+        source={require("../assets/emoji.json")} import emoji
         autoPlay
         loop
         style={styles.emojiAnimation}
@@ -39,7 +39,7 @@ export default function ForgotPassword({ navigation }) {
 
       {/* Floating Mascot Animation */}
       <LottieView
-        source={require("./assets/floatingMascot.json")}
+        source={require("../assets/floatingMascot.json")}
         autoPlay
         loop
         style={styles.floatingMascot}
@@ -81,7 +81,7 @@ export default function ForgotPassword({ navigation }) {
       {/* Reward Confetti Animation */}
       {submitted && (
         <LottieView
-          source={require("./assets/confetti.json")}
+          source={require("../assets/confetti.json")}
           autoPlay
           loop={false} // Play once
           style={styles.confetti}
