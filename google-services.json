@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "911343565754",
+    "project_id": "chat-app-c360c",
+    "storage_bucket": "chat-app-c360c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911343565754:android:5f6a170a8e58ea4eccfb83",
+        "android_client_info": {
+          "package_name": "com.connect.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911343565754-ml0rhtsp466pa0nmq3b7dfk5h8l1tnlh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWm0a-u1Bpi2RnnBmQrJrfhDCvQzdqGAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911343565754-ml0rhtsp466pa0nmq3b7dfk5h8l1tnlh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
