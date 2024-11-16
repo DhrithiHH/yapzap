@@ -27,23 +27,23 @@ export default function ForgotPassword({ navigation }) {
 
   return (
     <LinearGradient colors={["#FFDEE9", "#B5FFFC"]} style={styles.container}>
-      <Text style={styles.heading}>🔑 Forgot Password?</Text>
+      <Text style={styles.heading}>Your password ghosted? 👻 </Text>
 
       {/* Sassy Emoji Animation */}
       <LottieView
-        source={require("../assets/emoji.json")} import emoji
+        source={require("../assets/forgot.json")} import emoji
         autoPlay
         loop
         style={styles.emojiAnimation}
       />
 
-      {/* Floating Mascot Animation */}
+      {/* Floating Mascot Animation
       <LottieView
         source={require("../assets/floatingMascot.json")}
         autoPlay
         loop
         style={styles.floatingMascot}
-      />
+      /> */}
 
       {/* Sassy Callout Sticker */}
       <MotiView
@@ -51,7 +51,7 @@ export default function ForgotPassword({ navigation }) {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: "spring", delay: 500 }}
       >
-        <Text style={styles.callout}>“No stress, we got this! 😎”</Text>
+        <Text style={styles.callout}>Let’s zap it back! ⚡🚀</Text>
       </MotiView>
 
       {/* Input Field */}
