@@ -7,7 +7,7 @@ import Animated, {
   withRepeat,
   withSequence,
 } from "react-native-reanimated";
-import LinearGradient from "react-native-linear-gradient";
+import { LinearGradient } from "expo-linear-gradient"; // Updated for Expo
 import { MotiView } from "moti";
 
 export default function HomeScreen({ navigation }) {
@@ -15,10 +15,14 @@ export default function HomeScreen({ navigation }) {
   const floatAnim = useSharedValue(0);
 
   React.useEffect(() => {
-    floatAnim.value = withRepeat(withSequence(
-      withTiming(-10, { duration: 1500 }),
-      withTiming(10, { duration: 1500 })
-    ), -1, true);
+    floatAnim.value = withRepeat(
+      withSequence(
+        withTiming(-10, { duration: 1500 }),
+        withTiming(10, { duration: 1500 })
+      ),
+      -1,
+      true
+    );
   }, []);
 
   const avatarStyle = useAnimatedStyle(() => ({
@@ -26,10 +30,7 @@ export default function HomeScreen({ navigation }) {
   }));
 
   return (
-    <LinearGradient
-      colors={["#ff9a9e", "#fad0c4"]}
-      style={styles.container}
-    >
+    <LinearGradient colors={["#ff9a9e", "#fad0c4"]} style={styles.container}>
       <Text style={styles.heading}>Welcome to YapZap!</Text>
 
       {/* Floating Avatar */}
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     marginBottom: 20,
-    fontFamily: "Helvetica Neue", // Modern font
+    fontFamily: "Helvetica Neue",
   },
   avatar: {
     width: 120,
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     marginBottom: 40,
     borderWidth: 3,
-    borderColor: "#fff", // Adds a polished frame
+    borderColor: "#fff",
   },
   button: {
     backgroundColor: "#fff",
@@ -98,6 +99,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "600",
     color: "#333",
-    fontFamily: "Avenir Next", // Sleek and modern font
+    fontFamily: "Avenir Next",
   },
 });
