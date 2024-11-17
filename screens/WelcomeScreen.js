@@ -40,7 +40,7 @@ export default function WelcomeScreen({ navigation }) {
       />
 
       {/* Navigation Buttons with Ripple Effect */}
-      {["Login", "Register", "ForgotPassword"].map((screen, index) => (
+      {["Login", "Register", "ForgotPassword", "ProfilePage"].map((screen, index) => (
         <MotiView
           key={index}
           from={{ scale: 1 }}
