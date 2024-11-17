@@ -50,6 +50,7 @@
     "react-native-voice": "^0.3.0",
     "react-navigation": "^4.4.4",
     "react-navigation-stack": "^2.10.4",
+    "react-native-webrtc": "^124.0.4",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "styled-components": "^6.1.13",
