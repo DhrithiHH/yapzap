@@ -10,7 +10,7 @@ import Animated, {
 import { LinearGradient } from "expo-linear-gradient"; // Updated for Expo
 import { MotiView } from "moti";
 
-export default function HomeScreen({ navigation }) {
+export default function WelcomeScreen({ navigation }) {
   // Floating Avatar Animation
   const floatAnim = useSharedValue(0);
 
