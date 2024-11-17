@@ -1,26 +1,25 @@
-import { FAB } from 'react-native-paper'; // Add this import at the top of your file
+import React from 'react';
+import { FAB } from 'react-native-paper';
+import { StyleSheet } from 'react-native';
 
-const HomeScreen = () => {
+const FABButton = ({ onPress }) => {
   return (
-    <View style={styles.container}>
-      <ChatList renderChatItem={renderChatItem} />
-      
-      {/* FAB button */}
-      <FAB
-        style={styles.fab}
-        icon="message"
-        onPress={() => console.log('Start New Chat')}
-      />
-    </View>
+    <FAB
+      style={styles.fab}
+      icon="message"
+      onPress={onPress}
+      label="New Chat"
+    />
   );
 };
 
 const styles = StyleSheet.create({
-  ...existingStyles,
   fab: {
     position: 'absolute',
     right: 16,
     bottom: 16,
-    backgroundColor: '#75ab6b', // Match your theme color
+    backgroundColor: '#75ab6b', // Matches the YapZap theme color
   },
 });
+
+export default FABButton;
